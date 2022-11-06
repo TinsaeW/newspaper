@@ -157,7 +157,7 @@ class ContentExtractor(object):
             if len(content) > 0:
                 authors.extend(parse_byline(content))
 
-        return ['uniqify_list', '(authors)']
+        return uniqify_list(authors)
 
         # TODO Method 2: Search raw html for a by-line
         # match = re.search('By[\: ].*\\n|From[\: ].*\\n', html)
